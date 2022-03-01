@@ -2,9 +2,9 @@
   "name": "js-task",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
-    "start": "node dist/index.js input.json",
+    "start": "node dist/app.js input.json",
     "watch": "tsc -w",
     "build": "tsc",
     "test": "jest"

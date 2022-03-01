@@ -61,5 +61,5 @@ yarn start
 If you want to give it another JSON file:
 
 ```sh
-node dist/index.js filename.json
+node dist/app.js filename.json
 ```
