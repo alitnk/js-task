@@ -4,7 +4,7 @@ import type { UserId } from "./user-id";
 import type { UserType } from "./user-type";
 
 export interface Operation {
-  date: String;
+  date: string;
   user_id: UserId;
   user_type: UserType;
   type: OperationType;
