@@ -1,9 +1,5 @@
 import { httpClient } from "../http/http.service";
 
-export enum PersonType {
-  NATURAL = "NATURAL",
-  LEGAL = "LEGAL",
-}
 export interface CashInResponse {
   data: {
     percents: number;

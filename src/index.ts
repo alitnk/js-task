@@ -1,14 +1,6 @@
 import fs from "fs";
-export interface Operation {
-  date: String;
-  user_id: number;
-  user_type: "natural" | "juridical";
-  type: "cash_in" | "cash_out";
-  operation: {
-    amount: number;
-    currency: "EUR";
-  };
-}
+import { Operation } from "./types/operation";
+
 const args = process.argv.slice(2);
 
 if (args.length !== 1) {
