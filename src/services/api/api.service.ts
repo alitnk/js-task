@@ -31,6 +31,9 @@ export class ApiService {
     cashOutJuridical: null,
   };
 
+  /**
+   * Get the fee config for cash-in from the API.
+   */
   async cashIn(): Promise<CashInResponse["data"]> {
     if (this.cache.cashIn) return this.cache.cashIn;
 
@@ -42,6 +45,9 @@ export class ApiService {
     return response.data;
   }
 
+  /**
+   * Get the fee config for cash-out for natural persons from the API.
+   */
   async cashOutNatural(): Promise<CashOutNaturalResponse["data"]> {
     if (this.cache.cashOutNatural) return this.cache.cashOutNatural;
 
@@ -53,6 +59,9 @@ export class ApiService {
     return response.data;
   }
 
+  /**
+   * Get the fee config for cash-out for juridical persons from the API.
+   */
   async cashOutJuridical(): Promise<CashOutJuridicalResponse["data"]> {
     if (this.cache.cashOutJuridical) return this.cache.cashOutJuridical;
 

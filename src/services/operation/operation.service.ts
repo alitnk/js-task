@@ -10,8 +10,15 @@ import { ApiService, CashOutNaturalResponse } from "../api/api.service";
 export class OperationService {
   constructor(private readonly apiService: ApiService) {}
 
+  /**
+   * This works as a data store / repository for us to keep track of free fees.
+   * In a real-world application, this would probably be an actual database.
+   */
   protected freeFeeLimit: Record<string, Record<UserId, number>> = {};
 
+  /**
+   * Calculate the fee to pay for an operation.
+   */
   calculate(operation: Operation): Promise<number> {
     switch (operation.type) {
       case OperationType.CashIn:
@@ -26,6 +33,9 @@ export class OperationService {
     }
   }
 
+  /**
+   * Calculate the fee for cashing in.
+   */
   protected async cashIn({
     operation: { amount, currency },
   }: Operation): Promise<number> {
@@ -39,6 +49,9 @@ export class OperationService {
     return roundedFee;
   }
 
+  /**
+   * Calculate the fee for cashing out as a natural person.
+   */
   protected async cashOutNatural(operation: Operation): Promise<number> {
     let {
       operation: { amount, currency },
@@ -52,6 +65,9 @@ export class OperationService {
     return roundedFee;
   }
 
+  /**
+   * Calculate the fee for cashing out as a juridical person.
+   */
   protected async cashOutJuridical({
     operation: { amount, currency },
   }: Operation): Promise<number> {
@@ -65,6 +81,9 @@ export class OperationService {
     return roundedFee;
   }
 
+  /**
+   * Rounds the fee.
+   */
   protected round({ currency, amount }: Money) {
     switch (currency) {
       case Currency.EUR:
@@ -72,6 +91,9 @@ export class OperationService {
     }
   }
 
+  /**
+   * An internal function for natural persons cashing out to apply free fees.
+   */
   protected applyFreeFee(
     { user_id, date: dateString, operation: { amount, currency } }: Operation,
     naturalFee: CashOutNaturalResponse["data"]
@@ -102,6 +124,9 @@ export class OperationService {
     }
   }
 
+  /**
+   * An internal function to generate a tag for scoping the weeks.
+   */
   protected weeklyScopeDate(date: Date) {
     return `${date.getFullYear()}_${date.getMonth()}_${getWeekScope(date)}`;
   }

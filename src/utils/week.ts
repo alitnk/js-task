@@ -1,3 +1,5 @@
+// I have created these functions to avoid using a date library, but in a real-world application, I would rather using one (like date-fns).
+
 /**
  * This is a modified version of https://gist.github.com/markthiessen/3883242
  */
