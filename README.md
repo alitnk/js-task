@@ -14,21 +14,9 @@ For yarn users:
 yarn
 ```
 
-## Development
-
-For NPM users:
-
-```sh
-npm run watch
-```
-
-For yarn users:
-
-```sh
-yarn watch
-```
-
 ## Building
+
+Since the app uses TypeScript, you should build it before being able to use it.
 
 For NPM users:
 
@@ -40,20 +28,6 @@ For yarn users:
 
 ```sh
 yarn build
-```
-
-## Tests
-
-For NPM users:
-
-```sh
-npm run test
-```
-
-For yarn users:
-
-```sh
-yarn test
 ```
 
 ## Running
@@ -76,4 +50,32 @@ If you want to give it another JSON file:
 
 ```sh
 node dist/app.js filename.json
+```
+
+## Tests
+
+For NPM users:
+
+```sh
+npm run test
+```
+
+For yarn users:
+
+```sh
+yarn test
+```
+
+## Development
+
+For NPM users:
+
+```sh
+npm run watch
+```
+
+For yarn users:
+
+```sh
+yarn watch
 ```
