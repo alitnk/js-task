@@ -1,13 +1,15 @@
 import { OperationType } from "./operation-type";
 import { UserType } from "./user-type";
 
-export interface Operation {
+export interface OperationWrapper {
   date: String;
   user_id: number;
   user_type: UserType;
   type: OperationType;
-  operation: {
-    amount: number;
-    currency: "EUR";
-  };
+  operation: Operation;
+}
+
+export interface Operation {
+  amount: number;
+  currency: "EUR";
 }
