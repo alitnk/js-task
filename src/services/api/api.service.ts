@@ -25,6 +25,10 @@ export interface CashOutJuridicalResponse {
 export class ApiService {
   API_BASE = "https://developers.paysera.com/tasks/api";
 
+  /**
+   * This "cache" layer is here to prevent app from making too many calls to the API.
+   * It is a very simple implementation. In a real-world app this would need more attention. (perhaps re-validating after a timeout for when the app runs for a long time)
+   */
   cache = {
     cashIn: null,
     cashOutNatural: null,
