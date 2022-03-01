@@ -14,6 +14,20 @@ For yarn users:
 yarn
 ```
 
+# Development
+
+For NPM users:
+
+```sh
+npm run watch
+```
+
+For yarn users:
+
+```sh
+yarn watch
+```
+
 # Building
 
 For NPM users:
