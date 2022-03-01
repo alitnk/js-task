@@ -1,32 +1,24 @@
+import type { Money } from "../../types/money";
 import { httpClient } from "../http/http.service";
 
 export interface CashInResponse {
   data: {
     percents: number;
-    max: {
-      amount: number;
-      currency: "EUR";
-    };
+    max: Money;
   };
 }
 
 export interface CashOutNaturalResponse {
   data: {
     percents: number;
-    week_limit: {
-      amount: number;
-      currency: "EUR";
-    };
+    week_limit: Money;
   };
 }
 
 export interface CashOutJuridicalResponse {
   data: {
     percents: number;
-    min: {
-      amount: number;
-      currency: "EUR";
-    };
+    min: Money;
   };
 }
 

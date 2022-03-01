@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Currency } from "../../types/currency";
 import type {
   CashInResponse,
   CashOutJuridicalResponse,
@@ -14,7 +15,7 @@ const cashInServerResponse: CashInResponse = {
     percents: 0.03,
     max: {
       amount: 5,
-      currency: "EUR",
+      currency: Currency.EUR,
     },
   },
 };
@@ -41,7 +42,7 @@ const cashOutNaturalServerResponse: CashOutNaturalResponse = {
     percents: 0.3,
     week_limit: {
       amount: 1000,
-      currency: "EUR",
+      currency: Currency.EUR,
     },
   },
 };
@@ -71,7 +72,7 @@ const cashOutJuridicalServerResponse: CashOutJuridicalResponse = {
     percents: 0.3,
     min: {
       amount: 0.5,
-      currency: "EUR",
+      currency: Currency.EUR,
     },
   },
 };

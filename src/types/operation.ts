@@ -1,15 +1,12 @@
-import { OperationType } from "./operation-type";
-import { UserType } from "./user-type";
-
-export interface OperationWrapper {
-  date: String;
-  user_id: number;
-  user_type: UserType;
-  type: OperationType;
-  operation: Operation;
-}
+import type { Money } from "./money";
+import type { OperationType } from "./operation-type";
+import type { UserId } from "./user-id";
+import type { UserType } from "./user-type";
 
 export interface Operation {
-  amount: number;
-  currency: "EUR";
+  date: String;
+  user_id: UserId;
+  user_type: UserType;
+  type: OperationType;
+  operation: Money;
 }
