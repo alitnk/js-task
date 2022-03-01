@@ -1,6 +1,6 @@
-# Installing
+## Installing
 
-First clone the repository. then:
+First clone the repository, then:
 
 For NPM users:
 
@@ -14,7 +14,7 @@ For yarn users:
 yarn
 ```
 
-# Development
+## Development
 
 For NPM users:
 
@@ -28,7 +28,7 @@ For yarn users:
 yarn watch
 ```
 
-# Building
+## Building
 
 For NPM users:
 
@@ -42,7 +42,7 @@ For yarn users:
 yarn build
 ```
 
-# Tests
+## Tests
 
 For NPM users:
 
@@ -56,7 +56,7 @@ For yarn users:
 yarn test
 ```
 
-# Running
+## Running
 
 If you want to use the default `input.json` file (of course, you could change the content of input.json and test it with different values):
 
