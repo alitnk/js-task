@@ -64,7 +64,7 @@ export class ApiService {
   }
 
   /**
-   * Get the fee config for cash-out for juridical persons from the API.
+   * Get the fee config for cash-out for juridical representatives from the API.
    */
   async cashOutJuridical(): Promise<CashOutJuridicalResponse["data"]> {
     if (this.cache.cashOutJuridical) return this.cache.cashOutJuridical;

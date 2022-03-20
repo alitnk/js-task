@@ -66,7 +66,7 @@ export class OperationService {
   }
 
   /**
-   * Calculate the fee for cashing out as a juridical person.
+   * Calculate the fee for cashing out as a juridical representative.
    */
   protected async cashOutJuridical({
     operation: { amount, currency },

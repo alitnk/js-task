@@ -51,7 +51,7 @@ test("handles cash-in correctly", async () => {
   ).toBe(0.06);
 });
 
-test("handles cash-out for juridical persons correctly", async () => {
+test("handles cash-out for juridical representatives correctly", async () => {
   const operationService = createOperationService();
   expect(
     await operationService.calculate({
